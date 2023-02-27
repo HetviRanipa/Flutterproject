@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/secondpage.dart';
-
 class Detail1 extends StatefulWidget {
   const Detail1({Key? key}) : super(key: key);
 
@@ -99,7 +98,7 @@ class _Detail1State extends State<Detail1> {
                               icon: CircleAvatar(
                                 backgroundColor: Colors.white,
                                 child: Icon(
-                                  Icons.shopping_bag_outlined,
+                                  Icons.favorite_border_outlined,
                                   color: Colors.black,
                                 ),
                               ),
@@ -125,127 +124,125 @@ class _Detail1State extends State<Detail1> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Tommy Hilifiger",
+                          "Gucci",
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
                             color: Color(0xff39393b),
                           ),
                         ),
-                        Text(
-                          "\$180",
+                        Text('\$90',
                           style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xff39393b),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color:Color(0xff39393b)
                           ),
-                        )
+                        ),
+
                       ],
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "cottan ",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey[500],
+                          ),
+                        ),
+                      ],
+                    ),
+
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "Choose Size",
-                          style: TextStyle(
-                            color: Color(0xff979797),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            " color",
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
                           ),
                         ),
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Color(0xffac9ddd),
-                        )
+                      ],
+                    ),
+
+                    Column(
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(width: 5.0),
+                            CircleAvatar(
+                              radius: 15,
+                              backgroundColor: Color(0xfff19a9c),
+                            ),
+                            SizedBox(width: 5.0),
+                            CircleAvatar(
+                              radius: 15,
+                              backgroundColor: Color(0xff317aaf),
+                            ),
+                            SizedBox(width: 5.0),
+                            CircleAvatar(
+                              radius: 15,
+                              backgroundColor: Color(0xffac9ddd),
+                            ),
+
+                          ],
+                        ),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            " Size",
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            SizedBox(width: 5.0),
+                            buildSizeButton(
+                              title: "Xs",
+                              isSeleted: false,
+                            ),
+                            SizedBox(width: 5.0),
                             buildSizeButton(
                               title: "S",
                               isSeleted: false,
                             ),
+                            SizedBox(width: 5.0),
                             buildSizeButton(
                               title: "M",
-                              isSeleted: false,
-                            ),
-                            buildSizeButton(
-                              title: "L",
                               isSeleted: true,
                             ),
+                            SizedBox(width: 5.0),
+                            buildSizeButton(
+                              title: "L",
+                              isSeleted: false,
+                            ),
+                            SizedBox(width: 5.0),
                             buildSizeButton(
                               title: "XL",
                               isSeleted: false,
                             ),
                           ],
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            CircleAvatar(
-                              radius: 15,
-                              backgroundColor: Color(0xff317aaf),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        CircleAvatar(
-                          radius: 15,
-                          backgroundColor: Color(0xfff19a9c),
-                        )
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Description"),
-                            Container(
-                              width: 50,
-                              child: Divider(
-                                  thickness: 3,
-                                  color: Color(0xff6b648f)
-                              ),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Delivery"),
-                            Container(
-                              width: 50,
-                              child: Divider(
-                                  thickness: 3, color: Colors.transparent),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("Reviews"),
-                            Container(
-                              width: 50,
-                              child: Divider(
-                                thickness: 3,
-                                color: Colors.transparent,
-                              ),
-                            )
-                          ],
-                        )
                       ],
                     ),
 
@@ -261,18 +258,13 @@ class _Detail1State extends State<Detail1> {
                           height: 66,
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.0),
-                            gradient: LinearGradient(
-                              colors: [
-                                Color(0xff9f91cc),
-                                Color(0xff8471bb),
-                              ],
-                            ),
+                              borderRadius: BorderRadius.circular(20.0),
+                              color: Color.fromARGB(241, 241, 108, 131)
                           ),
                           padding: EdgeInsets.all(10.0),
                           child: Center(
                             child: Text(
-                              "Add to Cart",
+                              "Add to Bag",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,

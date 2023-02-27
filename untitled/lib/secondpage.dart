@@ -1,9 +1,12 @@
 
 import 'package:flutter/material.dart';
-import 'package:untitled/detail.dart';
+
+
 import 'package:untitled/detail2.dart';
 import 'package:untitled/detail3.dart';
+import 'package:untitled/get_all.dart';
 
+import 'detail.dart';
 import 'detail1.dart';
 
 class Secondpage extends StatefulWidget{
@@ -68,7 +71,11 @@ void dispose(){
                 shadowColor: Colors.black,
                 elevation: 3,
                 clipper: ShapeBorderClipper(shape: CircleBorder(),),
-                child: Icon(Icons.shopping_bag_outlined,color: Colors.black,),
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => GetAll()));
+                    },
+                    child: Icon(Icons.shopping_bag_outlined,color: Colors.black,),),
               ),
             ),
           ),
